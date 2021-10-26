@@ -1,16 +1,64 @@
-<h1>Add new questions here</h1>
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     <title>index</title>
+     <style>
+         *{
+             text-align: center;
+         }
+     </style>
+ </head>
+
+
+
+
+<body>
+
+    <nav class="navbar navbar-light bg-light navbar-expand-sm">
+        <a class="navbar-brand" href="#"> <span id="logo">TechQuizApp </span> </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar-list"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-list">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Log in </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Courses</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <h1 style="margin-left: 0px;">Add new Questions</h1><br /><br />
 <form action="/save" method="POST">
     <label for="question">Question: </label>
     <input type="text" name="ques" id="question" placeholder="Add your question here" style="height:50px; width:30%"><br><br>
     <label for="option1">Option 1: </label>
-    <input type="text" name="opt1" id="option1"><br><br>
+    <input class="form-control" type="text" name="opt1" id="option1"><br><br>
     <label for="option2">Option 2: </label>
-    <input type="text" name="opt2" id="option2"><br><br>
+    <input class="form-control" type="text" name="opt2" id="option2"><br><br>
     <label for="option3">Option 3: </label>
-    <input type="text" name="opt3" id="option3"><br><br>
+    <input class="form-control" type="text" name="opt3" id="option3"><br><br>
     <label for="option4">Option 4: </label>
-    <input type="text" name="opt4" id="option4"><br><br>
+    <input class="form-control" type="text" name="opt4" id="option4"><br><br>
     <label for="answer">Answer: </label>
-    <input type="text" name="ans" id="answer"><br><br>
-    <button type="submit">Save</button>
+    <input class="form-control" type="text" name="ans" id="answer"><br><br>
+    <button class="btn btn-danger" type="submit">Save</button>
 </form>
+</body>

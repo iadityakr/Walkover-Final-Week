@@ -42,7 +42,7 @@ def index():
 def verify():
     global email
     email = request.form["email"]
-    if email == "akashkumar8462@gmail.com":
+    if email == "aditya7549602102@gmail.com":
         cur.execute("SELECT * FROM submissions")
         submissions = cur.fetchall()
         return  render_template("admin_login.html", sub = submissions)

@@ -4,7 +4,6 @@ from random import *
 import random
 import mysql.connector as sql
 from datetime import datetime
-
 app = Flask(__name__)
 
 mydb = sql.connect(host="tutorial-dakshas.clmbpfr9muzj.ap-south-1.rds.amazonaws.com", user="akash", password="Akash123", database="test")
@@ -13,8 +12,8 @@ cur = mydb.cursor()
 mail = Mail(app)
 app.config["MAIL_SERVER"] = 'smtp.gmail.com'
 app.config["MAIL_PORT"] = 465
-app.config["MAIL_USERNAME"] = 'akashkumar8462@gmail.com'
-app.config['MAIL_PASSWORD'] = '8109474701Akash'
+app.config["MAIL_USERNAME"] = 'homea5154@gmail.com'
+app.config['MAIL_PASSWORD'] = 'pdzgfoexyepzwzqz'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
@@ -101,4 +100,7 @@ def saving():
  return "<h2>Saved Successfully</h2>"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
+
+
+# sudo chown ubuntu:ubuntu -R *

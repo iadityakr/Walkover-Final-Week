@@ -1,0 +1,22 @@
+<form action="/add" method="POST">
+    <button type="submit">Add question</button>
+</form>
+<form action="/attempt" method="POST">
+    <button type="submit">Attempt test</button>
+</form>
+<br>
+<br>
+<table style="border: 1px solid black; width:700px;">
+        <tr>
+            <th><b>Email</b></th>
+            <th><b>Date and time</b></th>
+            <th><b>Score</b></th>
+        </tr>
+    {% for i in sub %}
+        <tr>
+            <th>{{i[0]}}</th>
+            <th>{{i[1]}}</th>
+            <th>{{i[2]}}</th>
+        </tr>
+    {% endfor %}
+</table>

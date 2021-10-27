@@ -9,7 +9,7 @@ pipeline{
                 echo "Previous Build number is ${currentBuild.previousBuild.number}"
                 sh "sudo zip -r production${currentBuild.number}.zip /home/ubuntu/production "
                 sh "sudo mv production${currentBuild.number}.zip /home/ubuntu/backup"
-                // sh "sudo rm -f /home/ubuntu/backup/production${currentBuild.previousBuild.number}.zip"
+                sh "sudo rm -f /home/ubuntu/backup/production${currentBuild.previousBuild.number}.zip"
             }       
         }
         stage('Build'){

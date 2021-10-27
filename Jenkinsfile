@@ -17,6 +17,7 @@ pipeline{
             steps{
                     sh "sudo rm -rf /home/ubuntu/production/templates"
                     sh "sudo rm -rf /home/ubuntu/production/myenv"
+                    sh "sudo rm -rf /home/ubuntu/production/__pycache__"
                     sh "sudo mv * /home/ubuntu/production/"
             }
         }

@@ -1,5 +1,6 @@
 from flask import *
 import time
+import string
 from flask_mail import *
 from random import *
 import random
@@ -20,6 +21,8 @@ app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
 random.seed(time.clock())
 otp = random.randint(100000, 999999)
+str = random.choice(string.ascii_letters)
+otp = otp + str
 
 
 def shuffle(q):
@@ -57,7 +60,7 @@ def verify():
 @app.route('/validate', methods=["POST"])
 def validate():
     user_otp = request.form['otp']
-    if otp == int(user_otp):
+    if otp == user_otp:
         return render_template("user_login.html")
     return "<h3>failure, OTP does not match</h3>"
 

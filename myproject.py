@@ -17,7 +17,7 @@ app.config['MAIL_PASSWORD'] = 'pdzgfoexyepzwzqz'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
-otp = randint(000000, 999999)
+otp = random.randint(100000, 999999)
 
 
 def shuffle(q):

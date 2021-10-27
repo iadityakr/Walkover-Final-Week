@@ -19,7 +19,6 @@ app.config['MAIL_PASSWORD'] = 'pdzgfoexyepzwzqz'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
-random.seed(time.clock())
 otp = random.randint(100000, 999999)
 str = random.choice(string.ascii_letters)
 otp = otp + str

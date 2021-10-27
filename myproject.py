@@ -1,4 +1,5 @@
 from flask import *
+import time
 from flask_mail import *
 from random import *
 import random
@@ -17,6 +18,7 @@ app.config['MAIL_PASSWORD'] = 'pdzgfoexyepzwzqz'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
+random.seed(time.clock())
 otp = random.randint(100000, 999999)
 
 
